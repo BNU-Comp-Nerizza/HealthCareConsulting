@@ -1,0 +1,74 @@
+CREATE TABLE users(
+username varchar(255),
+usermail varchar(255),
+userpassword varchar(255)
+);
+
+CREATE TABLE bookings(
+name varchar(255),
+email varchar(255),
+demail varchar(255),
+issues varchar(255),
+days int,
+dates DATE
+);
+
+CREATE TABLE product(
+keyval int
+);
+
+CREATE TABLE dataset(
+email varchar(255),
+content varchar(255),
+postdate DATE,
+posttime TIME
+);
+
+
+CREATE TABLE deliverdetails(
+name varchar(255),
+email varchar(255),
+address varchar(255),
+phno varchar(255)
+);
+
+CREATE TABLE payment(
+email varchar(255),
+cardname varchar(255),
+cardno int,
+amount float,
+paiddate date,
+docemail varchar(255)
+);
+
+CREATE TABLE doctors(
+adminname varchar(255), 
+adminemail varchar(255),
+adminpassword varchar(255)
+);
+
+CREATE TABLE docprofile(
+dname varchar(255),
+dage int,
+demail varchar(255),
+dphno int,
+dphno2 int,
+ddegree varchar(255),
+dspeci varchar(255),
+dclg varchar(255),
+drank varchar(255),
+dexp varchar(255),
+dhosp varchar(255),
+dtreat varchar(255),
+dfees float,
+dmeet varchar(255),
+ddays date,
+dtiming time,
+dstatus varchar(255)
+);
+
+CREATE TABLE contact(
+name varchar(255),
+email varchar(255),
+subject varchar(255),
+message VARCHAR(255));

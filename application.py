@@ -17,11 +17,13 @@ from flask_login import LoginManager
 from flask_login import *
 from datetime import *
 
-app=Flask(__name__,template_folder='template')
-app.secret_key="key"
-app.config['MYSQL_HOST']="localhost"
-app.config['MYSQL_USER']="root"
-app.config['MYSQL_PASSWORD']=""
+application = app=Flask(__name__,template_folder='template')
+app.secret_key=os.environ.get('key')
+
+hostname = app.config['MYSQL_HOST']=os.environ.get('SQLALCHEMY_DATABASE_URI')
+user = app.config['MYSQL_USER']=os.environ.get('db_user')
+password = app.config['MYSQL_PASSWORD']=os.environ.get('db_password')
+
 app.config['MYSQL_DB']="servetoexcel"
 mysql=MySQL(app)
 

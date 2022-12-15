@@ -1,6 +1,11 @@
 from flask_login import login_required
 from flask_login import LoginManager
 from flask import *
+
+import application as main_file
+
+application = main_file.application
+
 def login_required(f):
     @wraps(f)
     def wrap(*args, **kwargs):
